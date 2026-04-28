@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "license": "MIT",
-  "homepage": "https://www.juneauflood.com/",
+  "homepage": "https://codefean.github.io/JEDC",
   "dependencies": {
     "mapbox-gl": "^3.8.0",
     "papaparse": "^5.5.2",
