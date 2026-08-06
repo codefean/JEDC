@@ -665,26 +665,7 @@ const handleFloodLayerChange = useCallback(
             hescoMode={hescoMode}
             onFloodLayerChange={handleFloodLayerChange}
           />
-          <button
-            data-tooltip="HESCO maps are only available for 14ft - 18ft & assume fully functional barriers"
-            onClick={() => {
-              if (selectedFloodLevel >= 14) toggleHescoMode();
-            }}
-            className={`hesco-toggle-button ${
-              hescoMode ? "hesco-on" : "hesco-off"
-            }`}
-            disabled={
-              loadingLayers ||
-              selectedFloodLevel < 14 ||
-              selectedFloodLevel > 18
-            }
-          >
-            {loadingLayers
-              ? "Loading HESCO Data…"
-              : hescoMode
-                ? "HESCO Barriers ON"
-                : "HESCO Barriers OFF (14-18ft)"}
-          </button>
+          
           <FloodStageMenu
             setFloodLevelFromMenu={setSelectedFloodLevel}
             onFloodLayerChange={() =>
@@ -709,24 +690,6 @@ const handleFloodLayerChange = useCallback(
       <FloodRecordsBar />
       <Search mapRef={mapRef} waterLevels={waterLevels} />
       <FloodCardMobile waterLevels={waterLevels} />
-      <button
-        title="HESCO maps are only available for 14ft - 18ft & assume fully functional barriers"
-        onClick={() => {
-          if (selectedFloodLevel >= 14) toggleHescoMode();
-        }}
-        className={`hesco-toggle-button-mobile ${
-          hescoMode ? "hesco-on" : "hesco-off"
-        }`}
-        disabled={
-          loadingLayers || selectedFloodLevel < 14 || selectedFloodLevel > 18
-        }
-      >
-        {loadingLayers
-          ? "Loading HESCO Data…"
-          : hescoMode
-            ? "HESCO Barriers ON"
-            : "HESCO Barriers OFF (14-18ft)"}
-      </button>
 
       {loadingLayers && (
         <div className="map-loading-overlay">
