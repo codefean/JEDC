@@ -12,8 +12,6 @@ import WaterLevelCard from "./WaterLevelCard";
 import LakeGages from "./LakeGages";
 import { floodedBusinessesByLevel } from "../data/floodedBusinessesByLevel";
 
-//test
-
 export const parcelTileset = {
   url: "mapbox://mapfean.74ijmvrj",
   sourceLayer: "juneau_props",
